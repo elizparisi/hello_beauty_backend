@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+night_out = Look.create(name: "Night Out")
+work = Look.create(name: "Work")
+no_makeup = Look.create(name: "No Makeup")
