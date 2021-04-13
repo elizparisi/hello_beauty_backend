@@ -9,3 +9,5 @@
 night_out = Look.create(name: "Night Out")
 work = Look.create(name: "Work")
 no_makeup = Look.create(name: "No Makeup")
+
+Product.create(name: "Fenty Beauty Blurring Skin Tint", category: "Face", look_id: no_makeup.id)
