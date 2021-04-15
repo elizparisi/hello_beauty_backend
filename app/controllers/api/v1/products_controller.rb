@@ -1,8 +1,13 @@
 class Api::V1::ProductsController < ApplicationController
 
   def index
-    @products = Product.all
-    render json: @products
+    products = Product.all
+    #render json: products
+    # include associated look 
+    # options = {
+    #  include: [:look]
+  #}
+    render json: ProductSerializer.new(products)
   end
 
   def create
