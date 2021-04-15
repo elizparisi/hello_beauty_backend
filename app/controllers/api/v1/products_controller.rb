@@ -1,8 +1,9 @@
 class Api::V1::ProductsController < ApplicationController
 
   def index
-    @products = Product.all
-    render json: @products
+    products = Product.all
+    #render json: products
+    render json: ProductSerializer.new(products)
   end
 
   def create
