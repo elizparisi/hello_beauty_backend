@@ -12,17 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2021_04_13_062856) do
 
-  create_table "looks", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "category"
-    t.integer "look_id"
+    t.string "original_name"
+    t.float "original_price"
+    t.string "original_image_url"
+    t.string "dupe_name"
+    t.float "dupe_price"
+    t.string "dupe_image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
