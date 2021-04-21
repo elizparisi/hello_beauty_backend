@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
 
-  belongs_to :look
+  belongs_to :category
 end
