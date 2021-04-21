@@ -3,7 +3,7 @@ class Api::V1::ProductsController < ApplicationController
   def index
     products = Product.all
     #render json: products
-    # include associated look 
+    # include associated look
     # options = {
     #  include: [:look]
   #}
@@ -23,6 +23,6 @@ class Api::V1::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :category, :look_id)
+    params.require(:product).permit(:original_name, :original_price, :original_image_url, :dupe_name, :dupe_price, :dupe_image_url, :category_id)
   end
 end
