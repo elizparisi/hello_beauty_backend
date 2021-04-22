@@ -14,7 +14,7 @@ class Api::V1::ProductsController < ApplicationController
     product = Product.new(product_params)
 
     if product.save
-      render json: product, status: :accepted
+      render json: ProductSerializer.new(product), status: :accepted
     else
       render json: { errors: product.errors.full_messages }, status: :unprocessible_entity
     end
